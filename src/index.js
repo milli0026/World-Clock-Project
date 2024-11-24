@@ -31,7 +31,7 @@ function updateCity(event) {
   let cityName = cityTimezone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimezone);
   let citiesElement = document.querySelector("#cities");
-  citiesElement.innerHTML = `
+  citiesElement.innerHTML += `
    <div class="city">
           <div>
             <h2>${cityName}</h2>
@@ -42,7 +42,7 @@ function updateCity(event) {
           )}</div>
           
     </div>
-    <a href="index.html">All cities</a>`;
+    <a href="index.html">Reset</a>`;
 }
 
 let selectElement = document.querySelector("#select");
